@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #343541;
+    color: white;
 }
 
 #wrapper-div {
@@ -47,11 +48,12 @@ body {
     flex-direction: row;
     width: 100%;
     min-height: 100px;
-    background-color: lightblue;
+    background-color: #40414F;
     margin-top: 10px;
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 50px;
 }
 
 #main-div {
@@ -59,17 +61,28 @@ body {
     flex-direction: row;
     width: 100%;
     min-height: 400px;
-    background-color: red;
+    background-color: #40414F;
     margin-top: 10px;
+    justify-content: space-between;
 }
 
 #input-div {
     display: flex;
     flex-direction: column;
     width: 50%;
-    min-height: 400px;
+    min-height: 500px;
     background-color: pink;
     padding: 20px;
+    background-color: #40414F;
+    justify-content: space-around;
+}
+
+#password-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 500px;
+    background-color: red;
 }
 
 .switch {
@@ -110,11 +123,11 @@ body {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #F05152;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #F05152;
   }
   
   input:checked + .slider:before {
