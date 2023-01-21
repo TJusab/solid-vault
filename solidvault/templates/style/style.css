@@ -1,3 +1,9 @@
-p {
-    background-color: yellow;
+* {
+    font-family: 'Roboto Mono', Verdana, sans-serif;
+    color: white;
+
+}
+
+body {
+    background: #343541;
 }
