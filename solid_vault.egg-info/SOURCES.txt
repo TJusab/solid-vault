@@ -1,0 +1,8 @@
+README.md
+setup.py
+solid_vault.egg-info/PKG-INFO
+solid_vault.egg-info/SOURCES.txt
+solid_vault.egg-info/dependency_links.txt
+solid_vault.egg-info/requires.txt
+solid_vault.egg-info/top_level.txt
+solidvault/__init__.py
