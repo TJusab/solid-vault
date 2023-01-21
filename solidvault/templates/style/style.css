@@ -7,3 +7,9 @@
 body {
     background: #343541;
 }
+
+#app {
+    width: 50vw;
+    height: 50vh;
+    background-color: yellow;
+}
