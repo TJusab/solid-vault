@@ -5,7 +5,6 @@ div#input-div label.switch {
     flex-wrap: wrap;
 }
 
-
 #input-div {
     display: flex;
     flex-direction: column;
@@ -52,6 +51,10 @@ div#input-div label.switch {
     height: 30px;
 }
 
+#singleInput {
+    display: inline-flex;
+}
+
 #generate-button {
     color: white;
     background-color: #F05152;
@@ -71,7 +74,7 @@ div#input-div label.switch {
 }
 .switch {
     position: relative;
-    display: inline-block;
+    display: inline;
     width: 60px;
     height: 34px;
   }
