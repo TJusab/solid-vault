@@ -30,7 +30,7 @@ def generate():
     character_set += string.punctuation if has_special else ""
 
     result = ''.join(random.choice(character_set) for _ in range(length)).replace(' ', '')
-    return render_template("generate.html")x
+    return render_template("generate.html")
 
 if __name__ == '__main__':
     app.run()
