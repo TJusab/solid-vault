@@ -1,4 +1,11 @@
 /*Password guidelines stylesheet*/
+
+div#input-div label.switch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 #input-div {
     display: flex;
     flex-direction: column;
@@ -7,6 +14,7 @@
     padding: 20px;
     background-color: #40414F;
     justify-content: space-around;
+    /*align-items: center;*/
 }
 
 #password-div {
@@ -94,3 +102,4 @@
   .slider.round:before {
     border-radius: 50%;
   }
+
