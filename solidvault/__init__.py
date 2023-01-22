@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask import request
 import random, string, jinja2
 
@@ -29,6 +29,9 @@ def generate():
             has_digits = request.form.get('has_digits')
             has_specials = request.form.get('has_specials')
 
+        if not (has_lowercase or has_uppercase or has_digits or has_specials):
+            # return render_template("generate.html", password="Select at least one set of character")
+            return redirect(url_for('static'), 200)
 
         character_set = ""
 
