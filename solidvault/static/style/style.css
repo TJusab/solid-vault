@@ -60,7 +60,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    min-height: 400px;
+    min-height: 650px;
     background-color: #40414F;
     margin-top: 10px;
     justify-content: space-between;
@@ -71,10 +71,6 @@ body {
     flex-direction: column;
     width: 50%;
     min-height: 500px;
-<<<<<<<< HEAD:solidvault/static/style.css
-    background-color: pink;
-========
->>>>>>>> origin/main:solidvault/static/style/style.css
     padding: 20px;
     background-color: #40414F;
     justify-content: space-around;
