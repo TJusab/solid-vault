@@ -66,4 +66,10 @@ body {
     justify-content: space-between;
 }
 
+/*sandbox mehdi*/
+#input-div .switch, #input-div #label-toggle{
+    /*background-color: pink;*/
+    display: flex;
+    flex-direction: row;
+}
 
