@@ -75,13 +75,11 @@
                     </div>
                 </div>
             </div>
+            <button id="generate-button">Generate password</button>
             </form>
             <div id="password-div">
                 <div id="suggested-pass" value="{{ password }}">{{ password }}</div>
             </div>
-    </div>
-    <div id="button-container">
-        <button id="generate-button">Generate password</button>
     </div>
     <div id="error-div">
         {% for message in get_flashed_messages() %}
