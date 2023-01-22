@@ -1,51 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Generate Password</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css')}}">
-</head>
-<body>
-    <div id="wrapper-div">
-        <div id="header-div">
-            Solid Vault
-        </div>
-        <div id="main-div">
-            <div id="input-div">
-                <label class="switch">
-                    <input type="checkbox" id="lowercase-toggle">
-                    <span class="slider round"></span>
-                </label>
+{% block content %}
 
-                <div id="label-toggle">Uppercase</div>
-                <div id="toggle-item">
-                <label class="switch">
-                    <input type="checkbox" id="uppercase-toggle">
-                    <span class="slider round"></span>
-                </label>
-                </div>
-                <div id="label-toggle">Lowercase</div>
-                <label class="switch">
-                    <input type="checkbox" id="digits-toggle">
-                    <span class="slider round"></span>
-                </label>
-                <div id="label-toggle">Digits</div>
-                <label class="switch">
-                    <input type="checkbox" id="special-toggle">
-                    <span class="slider round"></span>
-                </label>
-                <div id="label-toggle">Special characters</div>
-                <div id="length">
-                    <input type="number" name="length" id="length-field" value="6">
-                    <label for="length-field">Length of characters</label>
-                </div>
-                <button id="generate-button" >Generate password</button>
+    <html lang="en-CA">
+    <form method="POST" class="mx-20 mt-6" enctype="multipart/form-data">
+        <head>
+            <meta charset="UTF-8">
+            <title>Generate Password</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css') }}">
+        </head>
+        <body>
+        <div id="wrapper-div">
+            <div id="header-div">
+                Solid Vault
             </div>
-            <div id="password-div">
-                <div id="suggested-pass">Yo password here LMAO IT DO BE PASSWORDING AMIRIGHT</div>
+            <div id="main-div">
+                <div id="input-div">
+                    <label class="switch">
+                        <input type="checkbox" id="has_uppercase" name="has_uppercase">
+                        <span class="slider round"></span>
+                    </label>
+
+                    <div id="label-toggle">Uppercase</div>
+                    <div id="toggle-item">
+                        <label class="switch">
+                            <input type="checkbox" id="has_lowercase" name="has_lowercase">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div id="label-toggle">Lowercase</div>
+                    <label class="switch">
+                        <input type="checkbox" id="has_digits" name="has_digits">
+                        <span class="slider round"></span>
+                    </label>
+                    <div id="label-toggle">Digits</div>
+                    <label class="switch">
+                        <input type="checkbox" id="has_specials" name="has_specials">
+                        <span class="slider round"></span>
+                    </label>
+                    <div id="label-toggle">Special characters</div>
+                    <div id="length">
+                        <input type="number" name="length-field" id="length-field" value="6">
+                        <label for="length-field">Length of characters</label>
+                    </div>
+                    <button id="generate-button">Generate password</button>
+                </div>
+                <div id="password-div">
+                    <div id="suggested-pass" value="{{ password }}">{{ password }}</div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+        </body>
+    </form>
+    </html>
+
+{% endblock %}
