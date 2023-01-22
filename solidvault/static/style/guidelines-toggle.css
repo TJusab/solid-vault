@@ -41,7 +41,6 @@ div#input-div label.switch {
     background-color: #F05152;
     border-radius: 50px;
     margin: auto;
-    opacity: 0.5;
     justify-content: center;
     align-items: center;
 }
@@ -66,6 +65,7 @@ div#input-div label.switch {
 #label-toggle {
     font-size: 20px;
     width: 50%;
+    padding-left: 50px;
 }
 
 #toggle-item {
