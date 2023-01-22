@@ -4,22 +4,24 @@ import random, string, jinja2
 
 app = Flask(__name__)
 
-realPassword = "Your password here"
-
 
 @app.route('/')
 def generate_password():  # put application's code here
-    return render_template('generate.html', password=realPassword)
+    return render_template('generate.html', password="Your password here")
 
 
 @app.route('/generate', methods=("GET", "POST"))
 def generate():
+    password = "Your password here"
     if request.method == "POST":
-        length = request.form['length-field']
-        has_lowercase = request.form['has_lowercase']
-        has_uppercase = request.form['has_uppercase']
-        has_digits = request.form['has_digits']
-        has_specials = request.form['has_specials']
+        post_args = request.args
+        print(post_args)
+
+        length = int(post_args['length-field'])
+        has_lowercase = post_args["has_lowercase"] != "false"
+        has_uppercase = post_args["has_uppercase"] != "false"
+        has_digits = post_args["has_digits"] != "false"
+        has_specials = post_args["has_specials"] != "false"
 
         character_set = ""
 
@@ -31,8 +33,10 @@ def generate():
         password = ''.join(random.choice(character_set) for _ in range(length)).replace(' ', '')
         print("lol")
         print(password)
-
+    elif request.method == "GET":
+        raise Exception
     return render_template("generate.html", password=password)
+
 
 if __name__ == '__main__':
     app.run()
