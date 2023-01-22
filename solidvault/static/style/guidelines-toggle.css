@@ -14,7 +14,25 @@
     flex-direction: column;
     width: 50%;
     min-height: 500px;
-    background-color: red;
+    background-color: #40414F;
+}
+
+#password {
+    display: flex;
+    width: 100px;
+    min-height: 100px;
+    border-radius: 25px;
+    background-color: #F05152;
+}
+
+#suggested-pass {
+    display: flex;
+    width: 60%;
+    min-height: 100px;
+    background-color: #F05152;
+    border-radius: 50px;
+    margin: auto;
+    opacity: 0.5;
 }
 
 .switch {
