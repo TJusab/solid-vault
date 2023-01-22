@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html>
-
-{% block content %}
-<form method="POST" class="mx-20 mt-6" enctype="multipart/form-data">
-
-    <head>
-        <meta charset="UTF-8">
-        <title>Generate Password</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css')}}">
+</head>
+<body>
     <div id="wrapper-div">
         <div id="logo-div">
             Logo
@@ -22,30 +19,33 @@
         </div>
         <div id="main-div">
             <div id="input-div">
-                <label class="switch" id="lowercase-toggle">
-                    <input name="has_lowercase" id="has_lowercase" type="checkbox">
+                <label class="switch">
+                    <input type="checkbox" id="lowercase-toggle">
                     <span class="slider round"></span>
+                    <label for="lowercase-toggle"></label>
                 </label>
-                <label class="switch" id="uppercase-toggle">
-                    <input name="has_uppercase" id="has_uppercase" type="checkbox">
+                <label class="switch">
+                    <input type="checkbox" id="uppercase-toggle">
                     <span class="slider round"></span>
+                    <label for="uppercase-toggle"></label>
                 </label>
-                <label class="switch" id="digits-toggle">
-                    <input name="has_digits" id="has_digits" type="checkbox">
+                <label class="switch">
+                    <input type="checkbox" id="digits-toggle">
                     <span class="slider round"></span>
+                    <label for="digits-toggle"></label>
                 </label>
-                <label class="switch" id="special-toggle">
-                    <input name="has_specials" id="has_specials" type="checkbox">
+                <label class="switch">
+                    <input type="checkbox" id="special-toggle">
                     <span class="slider round"></span>
+                    <label for="special-toggle"></label>
                 </label>
-                <label for="length-field">Length</label>
-                <input type="number" name="length" id="length-field" value="6">
+                <div id="length">
+                    <input type="number" name="length" id="length-field" value="6">
+                    <label for="length-field">Length</label>
+                </div>
+                <button id="generate-button">Generate password</button>
             </div>
-                <button type="submit" id="generate-button">Generate password</button>
         </div>
     </div>
-    </body>
-</form>
-
-{% endblock %}
+</body>
 </html>
