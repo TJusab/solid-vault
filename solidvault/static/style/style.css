@@ -60,7 +60,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    min-height: 650px;
+    min-height: 500px;
     background-color: #40414F;
     margin-top: 10px;
     justify-content: space-between;

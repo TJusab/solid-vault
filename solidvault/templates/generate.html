@@ -1,95 +1,95 @@
 {% block content %}
 
-    <html lang="en-CA">
+<html lang="en-CA">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Generate Password</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css') }}">
-    </head>
-    <body>
-    <div id="wrapper-div">
-        <div id="header-div">
-            Solid Vault
-        </div>
-        <div id="main-div">
-            <form action="/generate" method="POST" enctype="multipart/form-data">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Password</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css') }}">
+</head>
+<body>
+<div id="wrapper-div">
+    <div id="header-div">
+        Solid Vault
+    </div>
+    <div id="main-div">
+        <form action="/generate" method="POST" enctype="multipart/form-data">
 
-                <div id="input-div">
+            <div id="input-div">
 
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_uppercase" name="has_uppercase">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Uppercase</div>
-                        </div>
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <label class="switch">
+                            <input type="checkbox" id="has_uppercase" name="has_uppercase">
+                            <span class="slider round"></span>
+                        </label>
+                        <div id="label-toggle">Uppercase</div>
                     </div>
-
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_lowercase" name="has_lowercase">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Lowercase</div>
-                        </div>
-                    </div>
-
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_digits" name="has_digits">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Digits</div>
-                        </div>
-                    </div>
-
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_specials" name="has_specials">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Special Characters</div>
-                        </div>
-                    </div>
-
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <input type="number" name="length-field" id="length-field" value="9">
-                            <label id="label-toggle" for="length-field">
-                                Length
-                            </label>
-                        </div>
-                    </div>
-
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label id="label-toggle">
-                                <input type="text" id="word" name="word">
-                                <div>Word to include</div>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button id="generate-button">Generate password</button>
                 </div>
+
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <label class="switch">
+                            <input type="checkbox" id="has_lowercase" name="has_lowercase">
+                            <span class="slider round"></span>
+                        </label>
+                        <div id="label-toggle">Lowercase</div>
+                    </div>
+                </div>
+
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <label class="switch">
+                            <input type="checkbox" id="has_digits" name="has_digits">
+                            <span class="slider round"></span>
+                        </label>
+                        <div id="label-toggle">Digits</div>
+                    </div>
+                </div>
+
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <label class="switch">
+                            <input type="checkbox" id="has_specials" name="has_specials">
+                            <span class="slider round"></span>
+                        </label>
+                        <div id="label-toggle">Special Characters</div>
+                    </div>
+                </div>
+
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <input type="number" name="length-field" id="length-field" value="9">
+                        <label id="label-toggle" for="length-field">
+                            Length
+                        </label>
+                    </div>
+                </div>
+
+                <div id="label-toggle">
+                    <div id="singleInput">
+                        <label id="label-toggle">
+                            <input type="text" id="word" name="word">
+                        </label>
+                    </div>
+                </div>
+            </div>
             </form>
             <div id="password-div">
                 <div id="suggested-pass" value="{{ password }}">{{ password }}</div>
             </div>
-        </div>
-        <div>
-            {% for message in get_flashed_messages() %}
-                <div class="alert-error">Error: {{ message }}</div>
-            {% endfor %}
-        </div>
     </div>
-    </body>
-    </html>
+    <div id="button-container">
+        <button id="generate-button">Generate password</button>
+    </div>
+    <div id="error-div">
+        {% for message in get_flashed_messages() %}
+        <div class="alert-error">Error: {{ message }}</div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
 
 {% endblock %}
