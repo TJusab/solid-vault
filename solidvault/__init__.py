@@ -14,14 +14,21 @@ def generate_password():  # put application's code here
 def generate():
     password = "Your password here"
     if request.method == "POST":
-        post_args = request.args
-        print(post_args)
+        if request.args:
+            post_args = request.args
 
-        length = int(post_args['length-field'])
-        has_lowercase = post_args["has_lowercase"] != "false"
-        has_uppercase = post_args["has_uppercase"] != "false"
-        has_digits = post_args["has_digits"] != "false"
-        has_specials = post_args["has_specials"] != "false"
+            length = int(post_args["length-field"])
+            has_lowercase = post_args["has_lowercase"] != "false"
+            has_uppercase = post_args["has_uppercase"] != "false"
+            has_digits = post_args["has_digits"] != "false"
+            has_specials = post_args["has_specials"] != "false"
+        else:
+            length = int(request.form.get('length-field'))
+            has_lowercase = request.form.get('has_lowercase')
+            has_uppercase = request.form.get('has_uppercase')
+            has_digits = request.form.get('has_digits')
+            has_specials = request.form.get('has_specials')
+
 
         character_set = ""
 
@@ -31,8 +38,8 @@ def generate():
         character_set += string.punctuation if has_specials else ""
 
         password = ''.join(random.choice(character_set) for _ in range(length)).replace(' ', '')
-        print("lol")
-        print(password)
+        # print("lol")
+        print(f"{length} letter(s) password : {password}")
     elif request.method == "GET":
         raise Exception
     return render_template("generate.html", password=password)

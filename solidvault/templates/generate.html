@@ -1,14 +1,14 @@
 {% block content %}
 
     <html lang="en-CA">
-    <form method="POST" class="mx-20 mt-6" enctype="multipart/form-data">
-        <head>
-            <meta charset="UTF-8">
-            <title>Generate Password</title>
-            <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
-            <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css') }}">
-        </head>
-        <body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Generate Password</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/style/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/style/guidelines-toggle.css') }}">
+    </head>
+    <body>
+    <form action="/generate" method="POST" class="mx-20 mt-6" enctype="multipart/form-data">
         <div id="wrapper-div">
             <div id="header-div">
                 Solid Vault
@@ -49,8 +49,8 @@
                 </div>
             </div>
         </div>
-        </body>
     </form>
+    </body>
     </html>
 
 {% endblock %}
