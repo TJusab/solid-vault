@@ -19,17 +19,30 @@
         <div id="main-div">
             <div id="input-div">
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="lowercase-toggle">
                     <span class="slider round"></span>
+                    <label for="lowercase-toggle"></label>
                 </label>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="uppercase-toggle">
                     <span class="slider round"></span>
+                    <label for="uppercase-toggle"></label>
                 </label>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="digits-toggle">
                     <span class="slider round"></span>
+                    <label for="digits-toggle"></label>
                 </label>
+                <label class="switch">
+                    <input type="checkbox" id="special-toggle">
+                    <span class="slider round"></span>
+                    <label for="special-toggle"></label>
+                </label>
+                <div id="length">
+                    <input type="number" name="length" id="length-field" value="6">
+                    <label for="length-field">Length</label>
+                </div>
+                <button id="generate-button">Generate password</button>
             </div>
         </div>
     </div>
