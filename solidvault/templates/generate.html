@@ -1,7 +1,7 @@
 {% block content %}
 
     <html lang="en-CA">
-    <form method="POST" enctype="multipart/form-data">
+
         <head>
             <meta charset="UTF-8">
             <title>Generate Password</title>
@@ -14,66 +14,68 @@
                 Solid Vault
             </div>
             <div id="main-div">
-                <div id="input-div">
+                <form action="/generate" method="POST" enctype="multipart/form-data">
 
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_uppercase" name="has_uppercase">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Uppercase</div>
+                    <div id="input-div">
+
+                        <div id="label-toggle">
+                            <div id="singleInput">
+                                <label class="switch">
+                                    <input type="checkbox" id="has_uppercase" name="has_uppercase">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div id="label-toggle">Uppercase</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_lowercase" name="has_lowercase">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Lowercase</div>
+                        <div id="label-toggle">
+                            <div id="singleInput">
+                                <label class="switch">
+                                    <input type="checkbox" id="has_lowercase" name="has_lowercase">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div id="label-toggle">Lowercase</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_digits" name="has_digits">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Digits</div>
+                        <div id="label-toggle">
+                            <div id="singleInput">
+                                <label class="switch">
+                                    <input type="checkbox" id="has_digits" name="has_digits">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div id="label-toggle">Digits</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="label-toggle">
-                        <div id="singleInput">
-                            <label class="switch">
-                                <input type="checkbox" id="has_specials" name="has_specials">
-                                <span class="slider round"></span>
-                            </label>
-                            <div id="label-toggle">Special Characters</div>
+                        <div id="label-toggle">
+                            <div id="singleInput">
+                                <label class="switch">
+                                    <input type="checkbox" id="has_specials" name="has_specials">
+                                    <span class="slider round"></span>
+                                </label>
+                                <div id="label-toggle">Special Characters</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="label-toggle">
-                        <div id="length">
-                            <input type="number" name="length-field" id="length-field" value="9">
-                            <label for="length-field">
-                            </label>
-                            <div id="label-toggle">Length</div>
+                        <div id="label-toggle">
+                            <div id="length">
+                                <input type="number" name="length-field" id="length-field" value="9">
+                                <label for="length-field">
+                                </label>
+                                <div id="label-toggle">Length</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <button id="generate-button">Generate password</button>
-                </div>
+                        <button id="generate-button">Generate password</button>
+                    </div>
+                </form>
                 <div id="password-div">
                     <div id="suggested-pass" value="{{ password }}">{{ password }}</div>
                 </div>
             </div>
         </div>
         </body>
-    </form>
     </html>
 
 {% endblock %}

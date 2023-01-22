@@ -31,7 +31,7 @@ def generate():
 
         if not (has_lowercase or has_uppercase or has_digits or has_specials):
             # return render_template("generate.html", password="Select at least one set of character")
-            return redirect(url_for('static'), 200)
+            return redirect(url_for(filename="generate.html"))
 
         character_set = ""
 
