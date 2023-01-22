@@ -11,7 +11,9 @@
 <body>
 <div id="wrapper-div">
     <div id="header-div">
+        <img src="{{ url_for('static', filename='/style/vault.jpg') }}"/>
         Solid Vault
+        <img src="{{ url_for('static', filename='/style/vault.jpg') }}"/>
     </div>
     <div id="main-div">
         <form action="/generate" method="POST" enctype="multipart/form-data">
@@ -60,7 +62,7 @@
 
                 <div id="label-toggle">
                     <div id="singleInput">
-                        <input type="number" name="length-field" id="length-field" value="9">
+                        <input type="number" name="length-field" id="length-field" value="9" min="2" max="32">
                         <label id="label-toggle" for="length-field">
                             Length
                         </label>
@@ -70,7 +72,7 @@
                 <div id="label-toggle">
                     <div id="singleInput">
                         <label id="label-toggle">
-                            <input type="text" id="word" name="word">
+                            <input type="text" id="word" name="word" placeholder="Include this word">
                         </label>
                     </div>
                 </div>

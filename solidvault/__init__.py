@@ -38,7 +38,7 @@ def generate():
             has_specials = request.form.get('has_specials')
 
         if not (has_lowercase or has_uppercase or has_digits or has_specials):
-            error = "At least one type of character must be selected"
+            error = "At least one type of toggle switch must be selected"
             # return render_template("generate.html", password="Select at least one set of character")
 
         if error is not None:

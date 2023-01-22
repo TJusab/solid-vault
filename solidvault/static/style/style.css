@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap%27');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', Verdana, sans-serif;
+    font-family: 'Noto Sans JP', Verdana, sans-serif;
     box-sizing: border-box;
 }
 
@@ -43,6 +45,11 @@ body {
     align-items: center;
 }
 
+img {
+    height: 100px;
+    width: auto;
+}
+
 #header-div {
     display: flex;
     flex-direction: row;
@@ -50,7 +57,7 @@ body {
     max-height: 100px;
     background-color: #40414F;
     margin-top: 10px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color: white;
     font-size: 50px;
@@ -64,6 +71,15 @@ body {
     background-color: #40414F;
     margin-top: 10px;
     justify-content: space-between;
+}
+
+#error-div {
+    padding: 10px;
+    display: flex;
+    color: #F05152;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /*sandbox mehdi*/
