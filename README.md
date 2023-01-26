@@ -1,12 +1,9 @@
-
-![Logo](https://q9k6x7m8.stackpathcdn.com/assets/reimagine2/devpost-logo-646bdf6ac6663230947a952f8d354cad.svg)
-
-
-# Solid Vault | Devpost
+# Solid Vault
 ## 💻About
 
 _**Solid Vault** Generates robust and secure passwords based on provided character sets (uppercase, lowercase, digits, and special characters). Furthermore, the user can choose a word to include in his generated password to make it easier to remember for the user._
 
+This project was initially developed during ConUHacks VII, [Concordia University](https://www.concordia.ca/) annual hackathon in Montreal, Quebec. 
 ## 📷Screenshots
 
 ![App Screenshot](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/354/357/datas/gallery.jpg)
@@ -24,12 +21,6 @@ We built **Solid Vault** using
 - [Jinja](https://github.com/pallets/jinja) web template engine
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
-
-
-## ⚙️Demo
-
-Run live [project](https://devpost.com/software/solid-vault)
-
 
 ## 🙌🏻Lessons Learned
 
@@ -54,11 +45,38 @@ We are obviously very proud of Solid Vault as it is, building such a tool with t
 - Suggest tips and tricks for better password practices
 - Store passwords securely and locally
 
+### Technical milestones
+
+In the future, we want to add some technical features to the application, including but not limited to:
+
+- Dockerising the application so that it can run on any desktop and server operating system (see more info about Docker [here](https://www.docker.com/)
+- Allow use via headless POST HTTP requestes 
+
+## Usage
+
+At the moment, Solid Vault has not been deployed on a server yet. You can, however, run it locally using the Flask on your terminal.
+
+### macOS/Linux
+
+Use the `flask` command on your terminal
+*Has been tested on macOS Ventura and Ubuntu.*
+
+```bash
+flask --app solidvault --debug run
+```
+
 ## 🧍🏻‍♂️Authors
 
-- [Mehdi Benouhoud](https://github.com/mehdiben7)
+- [Mehdi Benouhoud](https://github.com/mehdiben7/)
+- [Tayba Jusab](https://github.com/TJusab/)
+- [Constance Prevot](https://github.com/knstnce/)
+- [Ling Yi Huo](https://github.com/)
 
+For professional contact, please reach us on our LinkedIn accounts.
+## Contribution
 
-## 🪪License
+For contributions, please see the issues and keep in mind that the code might change a lot in the next few weeks. Hence, contribution to CSS might be hard if we changed the HTML a lot, or the file structure for example. Please feel free to fork this repo and open pull requestes. However, make sure to respect the license we used (GNU GPL v3.0). Although the project is open source, usage and contribution is subject to many conditions such as distribution under the same license and copyright notices.
 
-GNU General Public [LICENSE](https://github.com/TJusab/solid-vault/blob/main/LICENSE)
+### 🪪License
+
+GNU General Public v.3.0 [LICENSE](https://github.com/TJusab/solid-vault/blob/main/LICENSE)
